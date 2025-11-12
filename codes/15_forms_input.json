@@ -1,0 +1,124 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "4a419bc4-fb93-41b9-a6c3-e8034eee91f9",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -432,
+        -80
+      ],
+      "id": "ce142b89-d349-4df7-b5b4-8fd9accbd6e6",
+      "name": "Webhook",
+      "webhookId": "4a419bc4-fb93-41b9-a6c3-e8034eee91f9"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/15PSi6M5ssF-wcTMlC5ifEzl42g7iFld8CxvGtQasJdI/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15PSi6M5ssF-wcTMlC5ifEzl42g7iFld8CxvGtQasJdI/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "이름",
+              "lookupValue": "={{ $json.query.lname }}{{ $json.query.fname }}"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -224,
+        -80
+      ],
+      "id": "5f64bcab-fcaf-46ab-b5a7-692c5e687906",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "WlzVeJwnJp9Btt27",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json['option gmail'] }}",
+        "subject": "test",
+        "message": "={{ $('Webhook').item.json.query.content }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -32,
+        -80
+      ],
+      "id": "7258a879-f656-44d3-be38-1c14af9d592f",
+      "name": "Send a message",
+      "webhookId": "a6a18263-b970-4e6d-a9cf-feb680624667",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PdsoFdLibRNVt6gE",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": -1,
+    "availableInMCP": false,
+    "timeSavedPerExecution": 1
+  },
+  "versionId": "0443274e-097a-4629-a56d-840944caee57",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "33c25449c3be9d81992011f1de98dc1372c1c572956c448d79d1c15d1f1724c7"
+  },
+  "id": "nu2fbe5RfJRW8VEP",
+  "tags": []
+}
