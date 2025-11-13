@@ -1,7 +1,5 @@
+```
 <!DOCTYPE html>
-<!-- Chosen Palette: NeoStream Dark Indigo -->
-<!-- Application Structure Plan: 2단 그리드 레이아웃(데스크톱 기준)을 설계했습니다. 좌측(lg:col-span-2)에는 핵심 콘텐츠인 '영상 플레이어'와 '데이터 테이블'을 배치하여 시청과 정보 확인을 동시에 가능하게 했습니다. 우측(lg:col-span-1)에는 '승인/반려 컨트롤'과 '타임스탬프 댓글' 등 모든 인터랙션 요소를 집중 배치했습니다. 이 구조는 기획팀의 '직관적인 UI' 요구를 충족하며, 사용자가 시청(좌)과 행동(우)을 명확히 구분하여 사용할 수 있도록 유도합니다. -->
-<!-- Visualization & Content Choices: [영상 플레이어 영역 -> Goal: Inform -> Mockup Box (HTML/Tailwind) -> Interaction: None (Mockup) -> Justification: 핵심 기능 시각화 -> Library/Method: HTML/Tailwind], [승인/반려 버튼 -> Goal: Interact -> Buttons (HTML/Tailwind) -> Interaction: Click (JS) -> Justification: 핵심 의사결정 기능 -> Library/Method: JS], [타임스탬프 댓글 -> Goal: Interact/Inform -> Form & List (HTML/Tailwind) -> Interaction: Submit (JS) -> Justification: 핵심 리뷰 기능 -> Library/Method: JS], [데이터 테이블 -> Goal: Inform -> Table (HTML/Tailwind) -> Interaction: Read -> Justification: 운영팀 '데이터 밀집형' 요구 충족 -> Library/Method: HTML/Tailwind] -->
 <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <html lang="ko">
 <head>
@@ -249,3 +247,4 @@
     </script>
 </body>
 </html>
+```
