@@ -1,11 +1,11 @@
 .header{
-    background-color: cadetblue;
+    background-color: rgb(3, 53, 54);
     color:white;
     text-align: center;
     padding: 10px;
 }
 .menu{
-    background-color: lightgray;
+    background-color: rgb(30, 151, 155);
     padding: 10px;
     text-align: center;
 }
@@ -17,6 +17,15 @@
     margin: 10px;
     text-decoration: 5px;
     border-radius: 5px;
+    display: inline-block; 
+}
+.internal-links a{
+    background-color: rgb(165, 238, 238);
+    padding: 8px 16px;
+    color: black;
+    margin: 5px;
+    text-decoration: none;
+    border: 1px solid #08284b;    
     display: inline-block; 
 }
 .container{
