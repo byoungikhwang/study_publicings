@@ -1,0 +1,47 @@
+.header{
+    background-color: cadetblue;
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
+.menu{
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu a{
+    background-color: darkcyan;
+    padding: 10px 20px;
+    color: white;
+    margin: 10px;
+    text-decoration: 5px;
+    border-radius: 5px;
+    display: inline-block; 
+}
+.container{
+    background-color: gainsboro;
+    padding: auto;
+    max-width: 900px;
+    margin: 10px auto;    
+}
+hr{
+    border: 1px solid gray;    
+    margin: 20px;
+}
+.section{
+   background-color: white;
+   padding: 20px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+}
+.container{
+    background-color: gainsboro;
+}
+.footer{
+    background-color: cadetblue;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}

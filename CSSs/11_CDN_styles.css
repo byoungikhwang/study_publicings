@@ -1,0 +1,22 @@
+  <style>
+    div {
+      padding-top: 20px;
+      background-color: lightblue;
+      text-align: left;
+    }
+    .first-background {
+      padding-top: 20px;
+      background-color: lightgreen;
+      text-align: left;
+    }
+    span {
+      padding-left: 40px;
+      background-color: lightgray;
+      border: 3px solid red;
+    }
+    #second-border {
+      padding-left: 40px;
+      background-color: lightgray;
+      border: 3px solid green;
+    }
+  </style>
